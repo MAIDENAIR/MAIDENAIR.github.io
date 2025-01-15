@@ -29,15 +29,15 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Check-out of the draft hotel
         uses: actions/checkout@v4
-      - name: Setup Pages
+      - name: Booking a room at the Live Hotel
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+      - name: Check-in to the Live Hotel
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: '.'
-      - name: Deploy to GitHub Pages
+      - name: Settle in the room and become the new code
         id: deployment
         uses: actions/deploy-pages@v4
