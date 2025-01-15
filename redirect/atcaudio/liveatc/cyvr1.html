@@ -42,9 +42,9 @@
       font-size: 1.2em;
       color: #333;
     }
-    .stream-card .info iframe {
+    .stream-card .info audio {
       width: 100%;
-      height: 200px;
+      height: 50px;
       border: none;
     }
     .more-streams {
@@ -77,7 +77,10 @@
     <div class="stream-card">
       <div class="info">
         <h3>CYVR App/Dep #1 - Vancouver, British Columbia, Canada</h3>
-        <iframe src="https://s1-fmt2.liveatc.net/cyvr1_app?nocache=2024070819353693588&autoplay=false" title="CYVR App/Dep"></iframe>
+        <audio id="stream1" controls>
+          <source src="https://s1-fmt2.liveatc.net/cyvr1_app?nocache=2024070819353693588" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </div>
 
@@ -85,7 +88,10 @@
     <div class="stream-card">
       <div class="info">
         <h3>CYVR Del/Gnd - Vancouver, British Columbia, Canada</h3>
-        <iframe src="https://s1-bos.liveatc.net/cyvr1_gnd?nocache=2024070820151059500&autoplay=false" title="CYVR Ground"></iframe>
+        <audio id="stream2" controls>
+          <source src="https://s1-bos.liveatc.net/cyvr1_gnd?nocache=2024070820151059500" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </div>
 
@@ -93,7 +99,10 @@
     <div class="stream-card">
       <div class="info">
         <h3>CYYC Twr/App/Dep - Calgary, Alberta, Canada</h3>
-        <iframe src="https://s1-fmt2.liveatc.net/cyyc2_1?nocache=2024070818331165494&autoplay=false" title="CYYC Tower/Approach/Departure"></iframe>
+        <audio id="stream3" controls>
+          <source src="https://s1-fmt2.liveatc.net/cyyc2_1?nocache=2024070818331165494" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </div>
 
@@ -101,7 +110,10 @@
     <div class="stream-card">
       <div class="info">
         <h3>KPAC/LA App East Feeder</h3>
-        <iframe src="https://s1-fmt2.liveatc.net/kpoc2_klax_app_east_feeder?nocache=2025011522191459362&autoplay=false" title="LA App East Feeder"></iframe>
+        <audio id="stream4" controls>
+          <source src="https://s1-fmt2.liveatc.net/kpoc2_klax_app_east_feeder?nocache=2025011522191459362" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </div>
 
@@ -109,7 +121,10 @@
     <div class="stream-card">
       <div class="info">
         <h3>KLAX NW Feeder</h3>
-        <iframe src="https://s1-fmt2.liveatc.net/klax3n_nw_feeder?autoplay=false" title="KLAX NW Feeder"></iframe>
+        <audio id="stream5" controls>
+          <source src="https://s1-fmt2.liveatc.net/klax3n_nw_feeder" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </div>
 
@@ -117,13 +132,16 @@
     <div class="stream-card">
       <div class="info">
         <h3>KHHR App - Hawthorne, California, USA</h3>
-        <iframe src="https://s1-fmt2.liveatc.net/khhr1_app_124500?autoplay=false" title="KHHR App"></iframe>
+        <audio id="stream6" controls>
+          <source src="https://s1-fmt2.liveatc.net/khhr1_app_124500" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </div>
   </div>
 
   <div class="more-streams" onclick="alert('More streams coming soon!')">
-    More Streams Coming Soon
+    More Streams Coming Soon! | Powered by LiveATC
   </div>
 
 </body>
