@@ -47,6 +47,14 @@
       height: 50px;
       border: none;
     }
+    .fire-alert {
+      background-color: #d9534f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 1.3em;
+      font-weight: bold;
+    }
     .more-streams {
       margin-top: 30px;
       text-align: center;
@@ -71,6 +79,15 @@
     <h1>ATC Streams</h1>
     <p>Listen to live air traffic control feeds</p>
   </header>
+
+  <!-- Fire Department Alert Section -->
+  <div class="fire-alert">
+    <p><strong>Devastating Palisades Fire - Listen to Fire Department Audio</strong></p>
+    <audio id="fireStream" controls autoplay>
+      <source src="https://listen.broadcastify.com/bfxkj8w2mch56qp.mp3?nc=84909&xan=xtf9912b41c" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
   <div class="container">
     <!-- Stream 1 -->
@@ -138,11 +155,34 @@
         </audio>
       </div>
     </div>
+
+    <!-- Stream 7 -->
+    <div class="stream-card">
+      <div class="info">
+        <h3>KLAX ATIS Arrival</h3>
+        <audio id="stream7" controls>
+          <source src="https://s1-fmt2.liveatc.net/klax4n_atis_arr?nocache=2025011522405579986" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Stream 8 -->
+    <div class="stream-card">
+      <div class="info">
+        <h3>CYYC App - Calgary, Alberta, Canada</h3>
+        <audio id="stream8" controls>
+          <source src="https://s1-fmt2.liveatc.net/cyyc2_app?nocache=2025011522453919116" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
   </div>
 
   <div class="more-streams" onclick="alert('More streams coming soon!')">
-    More Streams Coming Soon! | Powered by LiveATC
+    More Streams Coming Soon
   </div>
 
 </body>
 </html>
+
