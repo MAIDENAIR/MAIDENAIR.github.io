@@ -1,16 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cyvr1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATC Streams</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+    header {
+      background-color: #2a3d66;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .stream-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+    .stream-card:hover {
+      transform: scale(1.05);
+    }
+    .stream-card img {
+      width: 100%;
+      height: auto;
+    }
+    .stream-card .info {
+      padding: 15px;
+    }
+    .stream-card .info h3 {
+      margin: 10px 0;
+      font-size: 1.2em;
+      color: #333;
+    }
+    .stream-card .info a {
+      display: inline-block;
+      background-color: #2a3d66;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .stream-card .info a:hover {
+      background-color: #1d2a45;
+    }
+  </style>
 </head>
 <body>
-    <h1>You are listening to:</h1>
-    <h2>CYVR App/Dep #1 - Vancouver, British Columbia, Canada</h2>
-    <iframe src="https://s1-fmt2.liveatc.net/cyvr1_app?nocache=2024070819353693588" width="100%" height="100%" style="border:none;"></iframe>
-    <h4>If the player does not appear please reload the page</h4>
-    <h4>Still no player? Contact Support</h4>
-    <a href="https://MAIDENAIR.github.io/redirect/atcaudio/liveatc/selectstation.html">Exit to selectstation</a>
+
+  <header>
+    <h1>ATC Streams</h1>
+    <p>Listen to live air traffic control feeds</p>
+  </header>
+
+  <div class="container">
+    <!-- Stream 1 -->
+    <div class="stream-card">
+      <img src="vancouver.jpg" alt="Vancouver ATC">
+      <div class="info">
+        <h3>CYVR App/Dep #1 - Vancouver, British Columbia, Canada</h3>
+        <a href="https://s1-fmt2.liveatc.net/cyvr1_app?nocache=2024070819353693588" target="_blank">Listen Live</a>
+      </div>
+    </div>
+
+    <!-- Stream 2 -->
+    <div class="stream-card">
+      <img src="vancouver-gnd.jpg" alt="Vancouver Ground ATC">
+      <div class="info">
+        <h3>CYVR Del/Gnd - Vancouver, British Columbia, Canada</h3>
+        <a href="https://s1-bos.liveatc.net/cyvr1_gnd?nocache=2024070820151059500" target="_blank">Listen Live</a>
+      </div>
+    </div>
+
+    <!-- Stream 3 -->
+    <div class="stream-card">
+      <img src="calgary.jpg" alt="Calgary ATC">
+      <div class="info">
+        <h3>CYYC Twr/App/Dep - Calgary, Alberta, Canada</h3>
+        <a href="https://s1-fmt2.liveatc.net/cyyc2_1?nocache=2024070818331165494" target="_blank">Listen Live</a>
+      </div>
+    </div>
+
+    <!-- Stream 4 -->
+    <div class="stream-card">
+      <img src="la-app.jpg" alt="LA App East Feeder ATC">
+      <div class="info">
+        <h3>KPAC/LA App East Feeder</h3>
+        <a href="https://s1-fmt2.liveatc.net/kpoc2_klax_app_east_feeder?nocache=2025011522191459362" target="_blank">Listen Live</a>
+      </div>
+    </div>
+
+    <!-- Stream 5 -->
+    <div class="stream-card">
+      <img src="la-nw.jpg" alt="LA NW Feeder ATC">
+      <div class="info">
+        <h3>KLAX NW Feeder</h3>
+        <a href="https://s1-fmt2.liveatc.net/klax3n_nw_feeder" target="_blank">Listen Live</a>
+      </div>
+    </div>
+
+    <!-- Stream 6 -->
+    <div class="stream-card">
+      <img src="hawthorne.jpg" alt="KHHR App ATC">
+      <div class="info">
+        <h3>KHHR App - Hawthorne, California, USA</h3>
+        <a href="https://s1-fmt2.liveatc.net/khhr1_app_124500" target="_blank">Listen Live</a>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
