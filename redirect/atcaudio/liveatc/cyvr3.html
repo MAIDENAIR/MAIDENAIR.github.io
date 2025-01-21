@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>cyvr1</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duo Login</title>
+  <script src="https://api-1d3687ed.duosecurity.com/frame/hosted/Duo-Web-v2.js"></script>
+  <style>
+    #duo_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px auto;
+    }
+    iframe {
+      border: none;
+    }
+  </style>
 </head>
 <body>
-<h1>You are listening to:</h1>
-<h2>CYVR Del/Gnd</h2>
-<iframe src="https://s1-bos.liveatc.net/cyvr1_gnd?nocache=2024070820151059500" width="100%" height="100" style="border:none;"></iframe>
-<h4>If the player does not appear please reload the page</h4>
-<h4>Still no player? Contact Support</h4>
+  <div id="duo_container">
+    <iframe id="duo_iframe" width="100%" height="500"></iframe>
+  </div>
+
+  <script>
+    Duo.init({
+      host: "api-1d3687ed.duosecurity.com",
+      sig_request: "YOUR_GENERATED_SIG_REQUEST", // Replace with the output from the Python script
+    });
+  </script>
 </body>
 </html>
