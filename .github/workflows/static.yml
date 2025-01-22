@@ -29,6 +29,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Update time
+        run: |
+          sudo apt update
+          sudo apt install -y ntpdate
+          sudo ntpdate pool.ntp.org
       - name: Check-out of the draft hotel
         uses: actions/checkout@v4
       - name: Booking a room at the Live Hotel
